@@ -65,7 +65,7 @@ controller.delete = async function (req, res){
     const filter = req.params.id;
     try{
         const result = await Funcionario.findByIdAndDelete(filter)
-        if (result) res.status(200).json({message:"Funcionario excluido conforme o solicitado"}).end();
+        if (result) res.status(200).json({message:"Funcionario excluído com sucesso!"}).end();
         else res.status(404).end();
     }catch (error){
         console.log(error)
